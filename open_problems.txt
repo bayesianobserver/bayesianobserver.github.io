@@ -1,7 +1,0 @@
-Open problems in machine learning
-
-
-Gracefully handling test data that looks very different from data
-Adversarial test data
-Adversarial training data
-Detecting deepfakes
