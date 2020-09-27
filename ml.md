@@ -11,6 +11,10 @@ Machine learning is a rapidly expanding field, with several organically contribu
 
 Recurrent Neural Networks
 
-`Attention`
+---
+
+Attention
+
+---
 
 Dropout
