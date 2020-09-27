@@ -9,8 +9,9 @@ title: ML notes
 
 Machine learning is a rapidly expanding field, with several organically contributing subdomains. This document is meant to keep track of interesting high level ideas in these fields. 
 
-Recurrent Neural Networks
+`Recurrent Neural Networks`
+Usefu for ordered data
 
+`Attention`
 
-* Attention
-* Dropout
+`Dropout`
