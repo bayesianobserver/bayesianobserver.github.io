@@ -9,3 +9,8 @@ Machine learning is a rapidly expanding field, with several organically contribu
 
 - [Deep learning](/ml/deeplearning)
 - [Bayesian methods](/ml/bayesianmethods)
+
+
+
+Inline-style: 
+![alt text](/assets/errSurface.png "Error Surface")
