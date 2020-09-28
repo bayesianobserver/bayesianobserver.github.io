@@ -8,4 +8,5 @@ Machine learning is a rapidly expanding field, with several organically contribu
 </p>
 
 [Deep learning](/ml/deeplearning)
+
 [Bayesian methods](/ml/bayesianmethods)
