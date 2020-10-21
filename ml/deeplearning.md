@@ -23,4 +23,6 @@ title: Deep Learning
 - Unsupervised learning / autoencoders
 - Self supervised learning
 - Deep reinforcement learning
+- Adversarial aspects of deep learning
+
 
