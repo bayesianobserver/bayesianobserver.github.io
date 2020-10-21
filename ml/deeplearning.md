@@ -14,7 +14,6 @@ title: Deep Learning
 	- Ideas around the loss surface
 	- Double descent
 
-
 - SGD and its properties
 
 - Deep learning fitting tips and tricks
