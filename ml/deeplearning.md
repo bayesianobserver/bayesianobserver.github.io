@@ -24,5 +24,7 @@ title: Deep Learning
 
 - Sequence models
 - Graph neural networks
-
+- Unsupervised learning / autoencoders
+- Self supervised learning
+- Deep reinforcement learning
 
