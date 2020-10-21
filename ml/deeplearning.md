@@ -3,8 +3,6 @@ layout: page
 title: Deep Learning
 ---
 
-Deep learning threads
-
 - Early history of deep learning's resurgence
 	- The 2006 Science paper
 	- 2012 imagenet
