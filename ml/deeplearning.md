@@ -7,7 +7,7 @@ title: Deep Learning
 	- The 2006 Science paper
 	- 2012 imagenet
 
-- Attempts at understanding 
+- Theoretical underpinnings 
 	- Why does an over-parameterized network work?
 	- Lottery ticket hypothesis
 	- The issue of Memorization
