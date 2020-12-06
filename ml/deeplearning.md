@@ -24,5 +24,6 @@ title: Deep Learning
 - Self supervised learning
 - Deep reinforcement learning
 - Adversarial aspects of deep learning
+- Noise Constrastive learning
 
 
