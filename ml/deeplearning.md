@@ -4,8 +4,9 @@ title: Deep Learning
 ---
 
 - Early history of deep learning's resurgence
-	- The 2006 Science paper
-	- 2012 imagenet
+- The 2006 Science paper
+- 2012 imagenet
+
 - Theoretical underpinnings 
 	- Why does an over-parameterized network work?
 	- Lottery ticket hypothesis
