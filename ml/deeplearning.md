@@ -30,4 +30,7 @@ Data with Neural Networks'](https://www.cs.toronto.edu/~hinton/science.pdf) that
 	- Out of distribution data at test time: the behavior of a deep neural network is unpredictable if the data fed to it at test time is completely different compared to data used at training time. To be fair, this is a problem with most supervised learning methods. Most methods assume that test data comes from the same distribution as training data - this is the basis Empirical Risk Minimization as a principle to justify minimizing a loss function on training data with the expectation of doing a good job on test data.
 - Noise Constrastive learning
 - Attention
+- Self supervised learning
+	- Labelled data is scarce. A lot of data has inherent structure. Useful representations of data can be learnt by artificially creating labels from portions or aspects of data that are already known, thereby exploting the known structure. The learnt representations can then perform well even on small amounts of labelled data. 
+	
 
