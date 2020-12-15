@@ -25,5 +25,5 @@ title: Deep Learning
 - Deep reinforcement learning
 - Adversarial aspects of deep learning
 - Noise Constrastive learning
-
+- Attention
 
