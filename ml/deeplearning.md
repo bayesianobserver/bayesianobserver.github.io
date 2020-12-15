@@ -4,7 +4,8 @@ title: Deep Learning
 ---
 
 - Early history of deep learning's resurgence
-	- The 2006 Science paper
+	- The 2006 Science paper: In 2006, Hinton and Salakhutdinov publish a small paper in Science titled [Reducing the Dimensionality of
+Data with Neural Networks'](https://www.cs.toronto.edu/~hinton/science.pdf) that used nonlinear autoencoders to do dimensionality reduction with 7-8 layers. The paper talked about a new (at the time) way of training deep networks called pretraining, in which each pair of successive layers was first used to initialize weights to a 'good initial solution' by treating this pair of layers as a REstricted Boltzman Machine. 
 	- 2012 imagenet
 - Theoretical underpinnings 
 	- Why does an over-parameterized network work?
