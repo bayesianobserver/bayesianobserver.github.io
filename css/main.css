@@ -1,8 +1,6 @@
-link-color: blue
 body {
     margin: 60px auto;
     width: 70%;
-    link-color: blue;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -17,7 +15,6 @@ nav ul li, footer ul li {
 a {
     text-decoration: none;
     color: #999;
-    link-color: blue;
 }
 a:hover {
     text-decoration: underline;
