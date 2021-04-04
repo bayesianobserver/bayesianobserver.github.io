@@ -1,5 +1,7 @@
 ---
 layout: post
+title: "Spike and Slab priors"
+date: 2021-01-24
 mathjax: true
 ---
 
