@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A call for economic mechanism design"
-date: 2021-06-28
+date: 2021-07-11
 mathjax: true
 ---
 
