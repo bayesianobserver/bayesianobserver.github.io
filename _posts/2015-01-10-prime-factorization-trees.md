@@ -11,3 +11,5 @@ A positive integer can be visualized as a tree, structured by its prime factors.
 <p align="center">
   <img width="320"  src="/assets/screen-shot-2012-10-07-at-9-55-37-am.png">
 </p>
+
+Hello!
