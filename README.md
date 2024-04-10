@@ -1,2 +1,2 @@
 # bayesianobserver.github.io
-Machine learning, Economics, human behavior, statistics
+A blog on Technology and Economics
