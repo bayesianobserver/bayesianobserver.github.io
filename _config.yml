@@ -1,11 +1,11 @@
 # Site settings
-title: The Central Dogma
+title: The Bayesian Observer
 email: 
-description: "Learnings on AI + Drug Design."
+description: "A blog on technology and economics."
 baseurl: ""
-url: "http://thecentraldogma.github.io"
-twitter_username: thecentraldogma
-github_username:  thecentraldogma
+url: "http://bayesian observer.github.io"
+twitter_username: bayesianobserver
+github_username:  bayesianobserver
 
 # Build settings
 markdown: kramdown
