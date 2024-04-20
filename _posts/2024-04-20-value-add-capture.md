@@ -9,7 +9,7 @@ Several years ago, I posted a question to friends and acquitainces: why is it th
 
 Value added is the sum total of benefit to society, but it cannot be quantified, because it is a subjective quantity (for example when buying a house, I might value a house much more than another bidder). Value captured is basically the monetary benefit that the economic agent (i.e. the teacher in this case) can sustainably extract from their economic activity (i.e. teaching). In other words, value captured is a market price. The reason that the market price of a teacher or nurse seems low, has nothing to do with the value they add because the price of anything in a free market society is determined only by relative supply and demand. Therefore, the pay scale for teachers and nurses is low because there is a relative oversupply compared to demand. This conclusion might seem surprising because the press doesn't cease to talk about the undersupply in both these professions. However, if there were truly an undersupply relative to demand, then the prices (i.e. the pay scales of teachers/nurses) would then rise till the supply matched the demand. This means that either the stated shortage is false, or that the demand for these professionals is price-elastic (with elasticity > 1) i.e. when the price charged by these teachers increases, the demand actually falls.
 
-	There are other economics systems / societies where prices are not only a function of the free market, but some prices are set (fixed) by an authority, i.e. the goverment. For example: 
+There are other economics systems / societies where prices are not only a function of the free market, but some prices are set (fixed) by an authority, i.e. the goverment. For example: 
 
 - the price of gasoline fuel was until recently fixed by the goverment in India, 
 - the price at which the state buys certain crops from farmers in India is still fixed, i.e. guaranteed. 
@@ -21,7 +21,7 @@ Comping back to Value Add vs Value Capture, this disntinction, although so obvio
 
 
 <p align="center">
-  <img width="320"  src="/assets/value.png">
+  <img width="400"  src="/assets/value.png">
 </p>
 
 
