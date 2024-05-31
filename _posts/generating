@@ -1,0 +1,1 @@
+An application of language modeling is: generating melodious sequences of notes, by learning a generative model on sequences of notes. I don't mean audio generation, but rather text generation using the alphabet of music, namely the 7 pure notes and the 5 minor notes. For this we wil be using the Hindustani and Carnatic classical music alphabet. 
