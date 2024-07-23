@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Social media and other collective traps"
+date: 2024-07-22
+mathjax: true
+---
+
+I've written before about products and services that have the following properties: 
+
+- They probably add negative value to society
+- Each individual consumer rationally purchases them
+
+Examples include: halloween candy, plastic knick-knacks ehcanged between kids on birthdays and valentines, kids birthday parties at indoor trampoline parks with cookie cutter pizza and juice boxes for the kids, and.. social media. 
+
+What is common among these products and services is that: (I suspect) a large percentage of the people who consume them do not really want to, but they have to because of pressures coming from outside themselves, i.e. what economists call 'externalities'. In the case of Halloween candy and kids birthday parties, I think this is because it because parents do not want to appear to be non-conformist and appear to deprive their children of experiences that are considered by _other parents_ as typical childhood experiences. In the case of social meia, this is because quitting social media incurs the cost of not being able to participate in conversation with friends and the resulting FOMO. 
+Given that this is my stance, I was very excited to see this paper from a bunch of economists, studying this very phenomenon: 
+
+[When Product Markets Become Collective Traps: The Case of Social Media, Bursztyn et al, 2023](https://www.nber.org/papers/w31771)
+
+The authors show using experiments, on recruited undergraduate students, that consumers will actually _pay_ for social media networks that they are part of, to not exist -- i.e. they place a value on getting rid of the service altogether, for _all_ consumers. But in order to stop using the service just by themselves, these same users want to be _paid_. 
+
+Other examples of products and services that follow this pattern include things that involve keeping up with the Jones': luxury goods like handbags and expensive cars, and lavish Indian weddings. To this I would also add: people who socially drink alcohol despite being aware of the negative health effects of any amount of alcohol consumption. The pattern here is part of a larger group of problems called coordination problems: if people are able to agree to coordinate in their decision making and collectively decide not to consumer a particular product/service, then they can pull it off, but accomplishing this coordination is extremely hard, and I am not aware of any large scale coordination attempt in history that has pulled off such a change successfully. This pattern is also similar to what happens in a standard prisoner's dilemma -- in that the stable equillibrium (in this case continuing to consume), can be very inefficient (i.e. the payoff to each player is worse than if they coordinated to not consume). If we can come up with a way to solve such coordination problems, this would be a major innovation! Imagine the reallocation of the time and resources that would be freed up, and the overall gain in utility by individuals!
+
+I'd be remiss if I didn't mention two other related ideas: 
+- Coalitional games: A coalitional game is an N-player game in which apart from each player making decisions on their own, players are also allowed to cform cooperative groups called coalitions, in which players coordinate and cooperate with one another, but do not necessarily cooperate with players outside the coalition. The formation of coalitions is determined by how the benefits of cooperation are distributed among the participants in a coalition -- if players feel they achieve greater utility by forming a different coalition with other players then an existing coalition can become unstable and break up. The exchange of information required to dicover potential new coalitions is a computationally complex, non trivial problem, partly because the number of coalitions is exponential in the number of players, and partly because the number of messages that need to be exchanged is large. I mention this because the formation of coalitions is also a coordination game - aand to the best of my knowledge, remains in general impractical, and at best an academic instrument. 
+- A cooridnation mechanism that I first heard from Simon Singh: At a talk I attended a couple of decades ago, Simon Singh talked about the problem of a dating game. two people meet each other to explore a potential romantic connection. They would like to signal whether each of them is interested. How can they do so in such a way such that nobody feels embarassed. This is like a coordination problem. The solution proposed by Singh was: they walk away from each other, facing opposite sides. The person who is interested turns around and looks at the other person, while the person who is not interested simply continues to walk away. In this mechanism, the person who is interested (while the other isn't) doesn't get embarassed because the other person does not discover that the first person was interested. 
+
+Inspired by Singh's proposed mechanism, I think there's a way to address the coordination problem of drinking alcohol despite not wanting to: the idea is to have a subtle signal that one doesn't want to drink alcohol, such that the signal has plausable denability. For example, let it be known that anyone wearing a white shirt might not want to drink alcohol. If 3 people who go to a party find themsleves all wearing white shirts, tihs indicates a preference for abstaining for alcohol and they can all get the hint. The plausible deniability is important because it allows for a person to not have to be the first to stop drinking. 
