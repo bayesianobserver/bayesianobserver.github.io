@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The value add vs. capture misalignment is because of positive externalities."
-date: 2024-07-22
+date: 2024-07-25
 mathjax: true
 ---
 
