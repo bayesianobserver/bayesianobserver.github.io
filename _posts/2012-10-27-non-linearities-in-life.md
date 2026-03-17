@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Non-linearities in Life"
+date: 2012-10-27
+original_url: "https://thebayesianobserver.wordpress.com/2012/10/27/non-linearities-in-life/"
+categories: ["machine-learning"]
+---
+Conventional wisdom says that the marginal gains accrued per unit increase in effort are diminishing. In some cases this does not hold, and the gains seem to be super-linear, rather than sublinear in the amount of effort.
+
+Consider for a moment that you are driving in your car, let’s call it Car 1, down a straight long road that has a series of traffic lights. A second car, lets call it Car 2, is driving near you at a speed that is only very slightly greater than yours. The other car is inching ahead of your car very slowly. At time t, the distance by which Car 2 is ahead of you is d(t).
+
+[![](/images/non-linearities-in-life-img-1.png "Screen shot 2012-10-27 at 10.00.48 PM")](https://thebayesianobserver.wordpress.com/wp-content/uploads/2012/10/screen-shot-2012-10-27-at-10-00-48-pm.png)
+
+As you near the next traffic signal, the light turns amber and you begin to slow down. But the driver of the other car doesn’t feel the need slow down, but instead makes it through the light without stopping, while you wait at the traffic signal. The gap between the two cars has suddenly increased. If the two cars were to maintain the same small different in speeds throughout the road, slowing and stopping only at traffic lights, then at time t, the distance d(t) between them will be a non-linear function, quite different from the linear function that it would have been, had there been no traffic lights. What do you think d(t) would look like?
+
+It’s not hard to reason out the shape of d(t). At any given time, either both cars are moving,, in which case, they have a relative velocity of v2-v1, or car 1 is stopped at a signal (relative velocity of v2), or car 2 is stopped at a signal (relative velocity of -v1). So the plot of d(t) versus t would be piece wise linear with one of 3 possible slopes in any segment. In the figure below, each segment is labelled with which car(s) is moving during that segment.
+
+[![](/images/non-linearities-in-life-img-2.png "Screen shot 2012-10-27 at 10.10.47 PM")](https://thebayesianobserver.wordpress.com/wp-content/uploads/2012/10/screen-shot-2012-10-27-at-10-10-47-pm.png)
+
+Over a long enough time t, d(t) will be significantly above the dotted line, i.e. the value of d(t) that one would expect if there were no traffic lights. Therefore, in the long term, Car 2, which started out with a small velocity advantage ends up far far ahead of Car 1, thanks to non-linearities introduced by the traffic lights.
+
+I have often mused about the similarity between the scenario above and other aspects of life, such as career growth. Just like the traffic lights, there are a number of thresholds in real life, e.g cut-off marks for the A+ grade in exams, a threshold for being accepted at a prestigious university or a job interview, or the difference between getting and not getting an award. Two individuals that differ by only a small amount, will, over the course of a long time interval, find themselves on different sides of these thresholds enough number of times. Thus, small differences in skill level and/or determination between very similar workers get amplified, leading to drastic differences in their achievements over a lifetime. Natural processes around us, including interactions between humans, are highly non-linear, and my suspicion is that humans do not accurately perceve the extent of the non-linearities. The fact that long term benefit can be superlinear in effort is a significant realization, because it means that putting in just a little bit of extra effort — e.g. an extra hour at work daily, an extra skill, extra effort in networking or maintaining relationships — can have a disproportionately positive effect in the long term. I’ll end with a passage from [Richard Hamming](http://en.wikipedia.org/wiki/Richard_Hamming)‘s [1986 lecture at Bell Labs titled ‘You and Your Research’](http://www.cs.virginia.edu/~robins/YouAndYourResearch.html) that touches upon this:
+
+> .. Now for the matter of drive. You observe that most great scientists have tremendous drive. I worked for ten years with John Tukey at Bell Labs. He had tremendous drive. One day about three or four years after I joined, I discovered that John Tukey was slightly younger than I was. John was a genius and I clearly was not. Well I went storming into Bode’s office and said, “How can anybody my age know as much as John Tukey does?” He leaned back in his chair, put his hands behind his head, grinned slightly, and said, “You would be surprised Hamming, how much you would know if you worked as hard as he did that many years.” I simply slunk out of the office!
+>
+> What Bode was saying was this: “Knowledge and productivity are like compound interest.” Given two people of approximately the same ability and one person who works ten percent more than the other, the latter will more than twice outproduce the former. The more you know, the more you learn; the more you learn, the more you can do; the more you can do, the more the opportunity – it is very much like compound interest. I don’t want to give you a rate, but it is a very high rate. Given two people with exactly the same ability, the one person who manages day in and day out to get in one more hour of thinking will be tremendously more productive over a lifetime. I took Bode’s remark to heart; I spent a good deal more of my time for some years trying to work a bit harder and I found, in fact, I could get more work done.
+
+1 hour extra per day turns out to be equal to be an extra ~1.5 months of 8 hour work days per year!

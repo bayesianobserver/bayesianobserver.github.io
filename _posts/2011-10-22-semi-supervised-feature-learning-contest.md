@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Semi-supervised feature learning contest"
+date: 2011-10-22
+original_url: "https://thebayesianobserver.wordpress.com/2011/10/22/semi-supervised-feature-learning-contest/"
+categories: ["machine-learning"]
+---
+A [research challenge on semi-supervised feature learning](http://www.kaggle.com/c/SemiSupervisedFeatureLearning), posted by D. Sculley of Google Research and hosted on Kaggle just ended this past Monday. The goal of the competition was to learn a collection of 100 features from a small amount of labelled data (50K points) and a large amount of unlabeled data (1M points) in a 1M dimensional space. The data in the original 1M-dimensional space was very sparse. The winning entry didn’t use the unlabeled data at all! This was a surprise to me because I was convinced that it would be possible to better by learning a low dimensional feature representation at all. The winning strategy is described by one of its authors [here](http://www.kaggle.com/c/SemiSupervisedFeatureLearning/forums/t/959/contest-methods/6182#post6182).
+
+Although I didn’t participate, I wanted to try building a deep autoencoder to lower the dimensionality. [This](http://www.cs.toronto.edu/~hinton/science.pdf) Science 2006 paper by Hinton and Salakhutdinov addresses this very problem. This paper came up with a method for better training of deep autoencoder architectures, by training each RBM layer-by-layer, instead of doing backprop on the entire network end to end. The paper has a number of neat examples of high dimensional data with low inherent dimensionality, and the authors show how nicely their autoencoders manage to recover the low dimensional features better than other popular methods such as PCA, [locally linear embedding](http://cs.nyu.edu/~roweis/lle/) and multi-dimensional scaling.
+
+I think one reason the deep autoencoder approach didn’t feature among the top entries in the Google/Kaggle challenge is that it is not obvious how to pick the right size and number of layers in the autoencoder. In general, there seems to be no solid work on this issue. Hinton and Slakhutdinov do not mention in their 2006 Science paper. A second reason I suspect it didn’t show up in the challenge results is that the challenge ran for just about 3 weeks, and it requires significant time to build and fine-tune autoencoder architectures for the specific problem.

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Machine learning symposium – Oct 21, 2011"
+date: 2011-10-22
+original_url: "https://thebayesianobserver.wordpress.com/2011/10/22/machine-learning-symposium-oct-21-2011/"
+categories: ["machine-learning"]
+---
+I spent the day at the annual machine learning symposium organized by the NY academy of sciences. The keynotes were by [Léon Bottou](http://leon.bottou.org/), [Yoav Freund](http://cseweb.ucsd.edu/~yfreund/), and [Stephen Boyd](www.stanford.edu/~boyd/). In addition, there were ~30 posters and a number of short talks by some of the poster presenters. I enjoyed Stephen Boyd’s keynote the most. He talked about a method for decoupling convex optimization problems for performing distributed machine learning with data sets that have a very large number of features and/or training samples. This is particularly relevant to the cluster/parallel computing paradigm.  Although I used his textbook in grad school, it was the first time I head him speak. His talk was lucid, entertaining and seemed effortless.
+
+The poster talks that caught my attention were:
+
+1. *A Reliable, Effective Terascale Linear Learning System –*Miroslav Dudik (Yahoo! Research). I’d heard a longer description of this work by John Langford at one of the NY ML meetups where John described a system they’ve developed called ‘AllReduce’.
+2. *Online Learning for Mixed Membership Network Models –*Prem Gopalan (Princeton University). I enjoyed seeing this mainly because of my interest in Latent Dirichlet Allocation and because of a close parallel with some work I’ve trying to do with network data.
+3. *Planning in Reward Rich Domains via PAC Bandits –*Sergiu Goschin (Rutgers University). Sergio drove home the point of his work beautifully and most aptly by showing a demo of his idea applied to the old Super Mario Bros. Nintendo videogame. The video shows a Mario navigating deftly through a level with an artificially high number of obstacles (ducks, and other little creatures that Mario isn’t supposed to come in to contact with). This pushed me to go back and take a look at their work.
+4. *Preserving Proximity Relations and Minimizing Edge-crossings in Graph Embeddings –*Amina Shabbeer (Rensselaer Polytechnic Institute). Amina’s work on displaying high dimensional graph data (each vertex of the graph is a point in high dimensional metric space) in a lower dimensional space, while preserving the distance properties as far as possible (this is a standard dimension reduction problem – PCA, LLE, MDS all seem fair game — she used MDS), and trying to prevent edge crossings (she addresses this by creating a small SVM-style linear separability problem for each pair of edges, and doing a global optimization). This work was interesting because it is a problem I encounter often when trying to visualize large scale data at AT&T as a graph. [SFDP](http://www2.research.att.com/~yifanhu/SOFTWARE/SFDP/index.html), an algorithm developed by [Yifan Hu](http://www2.research.att.com/~yifanhu/) of AT&T Labs addresses the same problem.
