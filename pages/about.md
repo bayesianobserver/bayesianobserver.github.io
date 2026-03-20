@@ -6,8 +6,12 @@ includelink: true
 
 **About me**
 
-I am a researcher and engineer with degrees in Electrical Engineering and Computer Science (BTech, MS, PhD). For the last 10 years I've had a strong interest at the intersection of economics, financial markets and AI. I currently work as a quant researcher in the financial markets in New York, focused on utilizing machine learning methods to predict idiosyncratic returns of stocks. In the past, I worked as a research scientist developing macihne learning methods for network security (2010-2014), as a machine learning quant at a quantitative headge fund (2014-2022), and as a research engineer working on adaptations of large language models to large amounts of textual news data (2022-2024). 
+I am a multi-disciplinary researcher and engineer with degrees in Electrical Engineering and Computer Science (BTech, MS, PhD). 
 
-**About this blog**
+I have worked: 
 
-I have a strong interest in economics and technology. This blog is a collection of posts and ideas born out of that interest. 
+- Quant researcher applying ideas from deep learning to predict noisy instrument returns at the days to weeks horizons (Two Sigma, Jain Global)
+- Research scientist developing macihne learning methods for anomaly detection in high dimensions in cyber security (AT&T Labs)
+- Researcher in signal processing and communications systems, using software defined radios (PhD research)
+
+

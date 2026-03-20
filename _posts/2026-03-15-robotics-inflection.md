@@ -7,21 +7,32 @@ mathjax: true
 
 There is perceptible excitement in the humanoid robotics industry these days. Personally, I think this is the most exciting space to be working in today -- because the promise of a fully autonomous, continuously learning, humanoid robot, is within reach. A number of startups are seriously working on developing a humanoid robot: Tesla, 1x, Figure, Boston Dynamics, Agility, Apptronik. This means there is a significant amount of capital betting on either a complete humanoid, or significant unlocking of capability to count as partial progress toward that goal. Not all robotics companies started as 'AI-first' -- several started with a focus on the mechatronics/hydraulics and hand-engineered rules for movement -- but there is a kind of convergence in progress I think, whereing most companies have realized that it is better to use data to learn behavior policies than to explicitly program robots with rules. 
 
-
 It feels to me like robotics might be at an inflectinon point, turning from a field dominated by impressive demos, academic research and special-purpose factory-robots, to a field that can progressively yield to improvements in engineering, models and scale of data, to show a path to a functioning, relaible humanoid robot within say 5-10 years.
 
 In this note, I want to summarize my recent readings: 
 -- Recent developments that are stirring excitement in the robotics world (behavior cloning, VLA models ++), and 
 -- The challenges that have yet to be solved. 
 
-#### Classical robotics
+#### **Evolution of robotics in brief**
+
+Robotics has seen roughly 3 eras so far. Oversimplifying a lot, these 3 eras have been: 
+
+- Classical robotics: Compute behavior from explicit world models and planners
+
+- Learning-based robotics: Learn behavior from data instead of hand-coding it
+
+- Foundation-model robotics: Learn general, reusable robot behavior by utilizing pre-trained models combining perception, language, and action at scale. This is the current era. 
+
+Let's dwell on the first two eras briefly before describing the latest improvements that have led to the current era in the following section. The robotics problem, simply stated has always been: 'How do we make a robot act correctly in a known world?'. This includes making the robot move through space correctly and safely and making the robot do the things its needs to do. 
+
+In the classical era (1960s to $$\sim$$2015), the system was built as separate modules: perception → planning → control. First estimate the world, then compute a trajectory, then track it with a controller. Intelligence was mostly engineered by humans. The robot depended on explicit models, geometry, and optimization. This worked best in structured settings, but it was brittle in messy, uncertain, open-ended environments. It was hard to hand-specify complex tasks like folding clothes or cleaning a room. Given that we are labelling a very long period of time as the classical period, there were actually a number of approaches and advances during this period, but for our purpose, viz to build up to the current era, we will not go deeper into each innovation of this era here. 
+
+The 2nd era, namely learning based robotics, aimed to replace hand-engineered rules with machine learning systems that can learn _policies_ directly from observations to actions, using demonstrations or reward-based learning. Instead of explicitly programming all the rules, train the robot on examples. The main modeling paradigms to emerge in this era were (a) Reinforcement Learning (RL) and (b) Imitation learning via behavior cloning (BC). Each moved the field forward in a different way. RL successfully enabled the learning of motion control policies by learning inside simulations. That is, instead of programming how a specific robot with a specific 3D geometry and mass should move via its control actuators, digitally representing the 3D geometry and mass, as well as various spatial courses through which the robot must move, allowed the learning of general policies for robotic control. Simulation offers infinite training data, but generally induces a gap between reality and sim, making learning from sims highly sensitive to how realistic the sims are. A core idea that enabled transfer learning from RL policies learnt in simuation to the real world was _domain randomization_. The core idea was simple: randomize the simulator so much (texture, object shapes \& sizes, camera position, physics parameters) that the real world looks like just another variation. MuJoCo (Multi-Joint dynamics with Contact) is an example of a physics simulator, maintained by DeepMind. RL has proved successful for locomotions tasks: walking, running, jumping, etc. as well as dextrous manipulation, balancing, stablization. These are all cases where it is easy to specify a reward (make progesss, dont fall down). But after having learnt basic locomotion and stability control, what if a general purpose robot needs to perform a new high level task, like "lift a large bag off a conveyor belt"? Instead of teaching this in sim, another approach is to provide expert demonstrations of a human performing the action and then making the robot clone the action, using lots of demonstration data. This is called Behavior Cloning, and can also be placed in the 2nd era of robotics. BC is useful when good behavior is easy to demonstrate but hard to codify as a reward in sim based learning. In practice, RL-learnt policies for basic control \& stability and BC-learnt policies for specific tasks are used together for making a robot perform specific tasks. However, one can see that this combination still leaves something lacking: It learns specific behaviors, but struggles to generalize broadly across tasks, environments, and there is no way to provide instructions in natural language. This is what the curent 3rd geneation of robotics tries to address. 
 
 
+#### **Recent advances** 
 
-
-#### Recent advances: 
-
-There is perceptible excitement humanoid robotics community these days, and I think it arises from recent applications of AI based approaches to humanoids. 
+The excitement in the humanoid robotics community today can be attributed to recent applications of AI based approaches that form the 3rd era of robotics. The main advances so far in this era have been: 
 
 - VLA (Vision Language Action) models, RT-2 (Robot Transfomer 2): answer the question "what should I do?"
 
@@ -58,23 +69,26 @@ OpenVLA is an open large-scale VLA model trained on robot demonstrations [1]. It
 -- continuous learning
 -- World models
 
-#### Path to humanoids at home
+#### **Path to humanoids at home**
 
 -- pets @ home
 -- humanoids @ factories, warehouses
 
 
-### References
+#### **References**
 
 1. Open VLA
 2. RT1
 3. RT2
 4. Diffusion policy
 5. The State of Robot Motion Generation
+6. Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World
 
-### Gloassary
+#### **Gloassary**
 
 - Classical robotics: 
+
+- Domain randomization: 
 
 - Imitation learning
 
@@ -85,6 +99,8 @@ OpenVLA is an open large-scale VLA model trained on robot demonstrations [1]. It
 - MuJoCo
 
 - Perception to action
+
+- Policy
 
 - TeleOperation
 
