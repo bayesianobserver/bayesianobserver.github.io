@@ -8,10 +8,10 @@ includelink: true
 
 I am a multi-disciplinary researcher and engineer with degrees in Electrical Engineering and Computer Science (BTech, MS, PhD). 
 
-I have worked: 
+I have worked as a: 
 
-- Quant researcher applying ideas from deep learning to predict noisy instrument returns at the days to weeks horizons (Two Sigma, Jain Global)
-- Research scientist developing macihne learning methods for anomaly detection in high dimensions in cyber security (AT&T Labs)
-- Researcher in signal processing and communications systems, using software defined radios (PhD research)
+- Quant researcher applying ideas from deep learning to predict noisy instrument returns at the days to weeks horizons (Two Sigma, Jain Global).
+- Research scientist developing machine learning methods for anomaly detection in high dimensions in cyber security (AT&T Labs).
+- Researcher in signal processing and communications systems, using software defined radios (PhD research).
 
 
