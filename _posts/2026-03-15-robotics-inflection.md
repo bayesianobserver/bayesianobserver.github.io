@@ -9,9 +9,9 @@ There is perceptible excitement in the humanoid robotics industry these days. Pe
 
 It feels to me like robotics might be at an inflectinon point, turning from a field dominated by impressive demos, academic research and special-purpose factory-robots, to a field that can progressively yield to improvements in engineering, models and scale of data, to show a path to a functioning, relaible humanoid robot within say 5-10 years.
 
-In this note, I want to summarize my recent readings: 
--- Recent developments that are stirring excitement in the robotics world (behavior cloning, VLA models ++), and 
--- The challenges that have yet to be solved. 
+In this note, I want to summarize: 
+* Recent developments that are stirring excitement in the robotics world (behavior cloning, VLA models ++), and 
+* The challenges that have yet to be solved. 
 
 #### **Evolution of robotics in brief**
 
@@ -44,67 +44,97 @@ Learned policies from the 2nd generation of robotics work, but they are still to
 
 The key advances/papers so far in this era can be summarized by the progression RT-1 --> RT-2 --> 
 
-* RT-1 (Robot Transfomer 1): The core idea is to train a single Transformer-based robot policy that takes as input (a) images from the robot’s cameras and (b) a natural-language instruction, and outputs robot actions. The policy is trained using expert demonstrations, so it is fundamentally a large-scale behavior-cloning system. The key advance is that one shared model is trained across many tasks, rather than training a separate policy for each task. Vision and language together provide the context that tells the model what task is being requested in the current scene, allowing it to learn a shared representation across tasks. RT-1 tokenizes its inputs and predicts discretized action tokens, so the problem becomes: conditioned on visual observations and a language instruction, predict the next robot action token sequence. A typical example would be showing the robot a table with several objects and giving an instruction such as “pick up the pen,” then training on expert demonstrations of the correct action. Architecturally, RT-1 uses an ImageNet-pretrained EfficientNet vision backbone, conditions it on the language instruction, compresses the resulting features into tokens, and then uses a Transformer to predict discretized robot actions. 
+* RT-1 (Robot Transfomer 1) [2]: The core idea is to train a single Transformer-based robot policy that takes as input (a) images from the robot’s cameras and (b) a natural-language instruction, and outputs robot actions. The policy is trained using expert demonstrations, so it is fundamentally a large-scale behavior-cloning system. The key advance is that one shared model is trained across many tasks, rather than training a separate policy for each task. Vision and language together provide the context that tells the model what task is being requested in the current scene, allowing it to learn a shared representation across tasks. RT-1 tokenizes its inputs and predicts discretized action tokens, so the problem becomes: conditioned on visual observations and a language instruction, predict the next robot action token sequence. A typical example would be showing the robot a table with several objects and giving an instruction such as “pick up the pen,” then training on expert demonstrations of the correct action. Architecturally, RT-1 uses an ImageNet-pretrained EfficientNet vision backbone, conditions it on the language instruction, compresses the resulting features into tokens, and then uses a Transformer to predict discretized robot actions. 
 
-* RT-2 (Robot Transformer 2): RT-1 uses the vision model as a pre-trained feature extractor to get vision tokens and combines them with launguage tokens to predict action tokens. However, all the intelligence comes from robot data rather than from pretrained semantic knowledge. RT-2 goes one step further: rather than using vision mainly as a feature extractor, it starts from a Vision-Language Model (VLM), whose representations are already grounded in large-scale image-text data from the web. This means the model brings in prior semantic knowledge about objects, categories, attributes, and simple relationships. The result is that language is no longer just a narrow task-conditioning signal; it can invoke broader concepts. So while RT-1 mainly learns to imitate demonstrated behaviors across many tasks, RT-2 can better generalize to instructions that require semantic interpretation, such as selecting an object by its use or by a higher-level description. In short, RT-2 keeps the same broad goal—mapping visual observations and language instructions to robot actions—but augments it with pretrained world knowledge.
+* RT-2 (Robot Transformer 2) [3]: RT-1 uses the vision model as a pre-trained feature extractor to get vision tokens and combines them with launguage tokens to predict action tokens. However, all the intelligence comes from robot data rather than from pretrained semantic knowledge. RT-2 goes one step further: rather than using vision mainly as a feature extractor, it starts from a Vision-Language Model (VLM), whose representations are already grounded in large-scale image-text data from the web. This means the model brings in prior semantic knowledge about objects, categories, attributes, and simple relationships. The result is that language is no longer just a narrow task-conditioning signal; it can invoke broader concepts. So while RT-1 mainly learns to imitate demonstrated behaviors across many tasks, RT-2 can better generalize to instructions that require semantic interpretation, such as selecting an object by its use or by a higher-level description. In short, RT-2 keeps the same broad goal—mapping visual observations and language instructions to robot actions—but augments it with pretrained world knowledge.
 
-- Diffusion policy: Separate from the use of internet-scale foundation VLM models for robot training, a parallel development has been the use of diffusion models to learn a multi-modal distribution of actions when learning to map image and launguage instruction encodings to expert actions. This is useful because there is often not just a singe correct action pertaining to a given context, i.e. the space of correct actions that a robot could perform, is multi-modal. This paper proposes learning a distribution over action sequences (trajectories) using a DDPM-style diffusion model, rather than point predictions of actions. 
+- Diffusion policy [4]: Separate from the use of internet-scale foundation VLM models for robot training, a parallel development has been the use of diffusion models to learn a multi-modal distribution of actions when learning to map image and launguage instruction encodings to expert actions. This is useful because there is often not just a singe correct action pertaining to a given context, i.e. the space of correct actions that a robot could perform, is multi-modal. This paper proposes learning a distribution over action sequences (trajectories) using a DDPM-style diffusion model, rather than point predictions of actions. 
 
 
-A number of other VLA models have appeared more recently—OpenVLA, GR00T, and others—that move in the direction of a GPT-like foundation model for robotics. The core idea is to train a single, large model on diverse datasets spanning many robots, environments, and tasks, so that it learns a general-purpose mapping from vision and language inputs to actions. Instead of building task-specific policies, these systems aim to learn a broad prior over how to act in the physical world, enabling transfer across tasks and even across different robot embodiments. Much like GPT models in language, the hope is that scale—both in data and model size—combined with a unified architecture over vision, language, and action, will yield emergent capabilities such as compositional task execution, few-shot adaptation to new tasks, and more robust generalization in real-world settings.
+A number of other VLA models have appeared more recently—OpenVLA [1], GR00T, and others—that move in the direction of a GPT-like foundation model for robotics. The core idea is to train a single, large model on diverse datasets spanning many robots, environments, and tasks, so that it learns a general-purpose mapping from vision and language inputs to actions. Instead of building task-specific policies, these systems aim to learn a broad prior over how to act in the physical world, enabling transfer across tasks and even across different robot embodiments. Much like GPT models in language, the hope is that scale—both in data and model size—combined with a unified architecture over vision, language, and action, will yield emergent capabilities such as compositional task execution, few-shot adaptation to new tasks, and more robust generalization in real-world settings.
 
 
 
 #### **Challenges still remaining**
 
-As far as I can tell, we are nowhere close to a general purpose humanoid robot at an acceptable level of fidelity. 
+As far as I can tell, we are nowhere close to a general purpose humanoid robot at an acceptable level of fidelity. Several challenges remain. 
 
--- Covariate shift in live deployment: This is still one of the central technical bottlenecks. In imitation learning, a policy is trained on states visited by an expert demonstrator or teleoperator. But at deployment time, small errors in perception, actuation, latency, calibration, or contact can push the robot into states it never saw during training. Then the policy is effectively forced to extrapolate. In a manipulator benchmark that may mean a failed pick; in a humanoid it may mean a stumble, a collision, or a fall. RT-1-style behavioral cloning and even diffusion-style policies improve data efficiency and expressivity, but they do not remove the basic off-distribution problem [2][4]. Addressing this will likely require some combination of online data aggregation, better recovery behaviors, uncertainty-aware planning, and more robust lower-level control.
+1. Data & Learning
+
+* Data bottleneck / lack of web-scale robot data: actively addressed by Google DeepMind ([Open X-Embodiment](https://robotics-transformer-x.github.io/)), Stanford ([OpenVLA](https://openvla.github.io/)), Berkeley ([Octo](https://octo-models.github.io/)), and Physical Intelligence.
+* Continuous learning / lifelong adaptation without forgetting: I don't think anyone has done this well. There was some early work at Meta and DeepMind. 
+* Covariate shift / compounding error: still an open problem. 
+* Exploration and credit assignment in RL: actively being studied at several RL focused groups.
 
 
--- Hand grasping
--- continuous learning
--- World models
+2. Models & Representation
 
-#### **Path to humanoids at home**
+* Lack of good world models / causal physical understanding: several new labs are working on world models -- Yann Lecun's AMI Labs, Fei Fel Li's World Labs, Physical Intelligence. 
+* Compositional generalization: models cannot reliably combine known skills into new tasks. I think this is being actively researched by the same places that are working on VLA models. 
 
--- pets @ home
--- humanoids @ factories, warehouses
+
+3. Control & Action
+
+* Latency and real-time control: large models are too slow for high frequency control loops. 
+
+
+4. Embodiment & Physics
+
+* Hardware and embodiment limitations (e.g., hand design): the design of dextrous hands remain a major open [problem](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/). 
+* Contact-rich manipulation and physics.
+* Cross-embodiment transfer
+
+
+5. Deployment & Real-World Reliability
+
+* Generalization and robustness in the real world
+* Sim-to-real gap
+* Safety and reliability
+* Evaluation and benchmarking
+* Integration of perception, reasoning, planning, and control: the autonomous vehicles industry seems to have made several advances in this direction. 
+
+
+#### Aerial autonomy 
+
 
 
 #### **References**
 
-1. Open VLA
-2. RT1
-3. RT2
-4. Diffusion policy
-5. The State of Robot Motion Generation
-6. Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World
-7. DDPM 
+1. Open VLA, https://github.com/openvla/openvla
+2. RT1, https://research.google/blog/rt-1-robotics-transformer-for-real-world-control-at-scale/
+3. RT2, https://robotics-transformer2.github.io/
+4. Diffusion policy, https://diffusion-policy.cs.columbia.edu/
+5. Groot: https://arxiv.org/abs/2503.14734
+6. The State of Robot Motion Generation
+7. Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World
+8. Denoising Diffusion Probabilistic Models, https://arxiv.org/pdf/2006.11239
+
+
 
 #### **Gloassary**
 
-- Classical robotics: 
+* **Classical robotics:** A paradigm where robot behavior is designed using explicit models of geometry, dynamics, and control, typically organized as perception → planning → control.
 
-- Domain randomization: 
+* **Domain randomization:** A sim-to-real technique where simulation parameters (visuals, physics, etc.) are randomized during training so learned policies generalize to real-world variations.
 
-- Imitation learning
+* **Imitation learning:** A class of methods where a robot learns behavior by observing and imitating expert demonstrations rather than optimizing a reward.
 
-- Learning from Demonstration
+* **Learning from Demonstration:** A practical form of imitation learning where data is collected from human or expert control (often via teleoperation) and used to train a policy.
 
-- Model based control
+* **Model-based control:** A control approach that uses an explicit model of system dynamics to plan and optimize actions, such as in Model Predictive Control (MPC).
 
-- MuJoCo
+* **MuJoCo:** A physics simulation engine widely used in robotics and reinforcement learning for fast, accurate simulation of dynamics and control.
 
-- Perception to action
+* **Perception to action:** An end-to-end learning approach where raw sensory inputs (e.g., images) are directly mapped to actions without explicit intermediate planning modules.
 
-- Policy
+* **Policy:** A function or model that maps observations (or states) to actions, typically denoted as π(a | o).
 
-- TeleOperation
+* **Teleoperation:** A method of controlling a robot remotely (e.g., via joystick or VR), often used to collect demonstration data for learning.
 
-- VLA model: 
+* **VLA model (Vision-Language-Action):** A unified model that takes visual input and language instructions and outputs actions, enabling integrated perception, reasoning, and control.
 
-- VLM model: 
+* **VLM model (Vision-Language Model):** A model trained on image-text data that learns joint representations of visual and linguistic information for tasks like captioning and reasoning.
 
-- Visuomotor policy: 
+* **Visuomotor policy:** A policy that maps visual observations (e.g., camera images) directly to motor actions, typically learned via imitation or reinforcement learning.
+
 
