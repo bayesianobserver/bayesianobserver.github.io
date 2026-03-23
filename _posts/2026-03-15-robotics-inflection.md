@@ -59,7 +59,7 @@ A number of other VLA models have appeared more recently—OpenVLA [1], GR00T, a
 
 As far as I can tell, we are nowhere close to a general purpose humanoid robot at an acceptable level of fidelity. Several challenges remain. 
 
-1. Data & Learning
+**Data & Learning**
 
 * Data bottleneck / lack of web-scale robot data: actively addressed by Google DeepMind ([Open X-Embodiment](https://robotics-transformer-x.github.io/)), Stanford ([OpenVLA](https://openvla.github.io/)), Berkeley ([Octo](https://octo-models.github.io/)), and Physical Intelligence.
 * Continuous learning / lifelong adaptation without forgetting: I don't think anyone has done this well. There was some early work at Meta and DeepMind. 
@@ -67,34 +67,31 @@ As far as I can tell, we are nowhere close to a general purpose humanoid robot a
 * Exploration and credit assignment in RL: actively being studied at several RL focused groups.
 
 
-2. Models & Representation
+**Models & Representation**
 
 * Lack of good world models / causal physical understanding: several new labs are working on world models -- Yann Lecun's AMI Labs, Fei Fel Li's World Labs, Physical Intelligence. 
 * Compositional generalization: models cannot reliably combine known skills into new tasks. I think this is being actively researched by the same places that are working on VLA models. 
 
 
-3. Control & Action
+**Control & Action**
 
 * Latency and real-time control: large models are too slow for high frequency control loops. 
 
 
-4. Embodiment & Physics
+**Embodiment & Physics**
 
 * Hardware and embodiment limitations (e.g., hand design): the design of dextrous hands remain a major open [problem](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/). 
 * Contact-rich manipulation and physics.
 * Cross-embodiment transfer
 
 
-5. Deployment & Real-World Reliability
+**Deployment & Real-World Reliability**
 
 * Generalization and robustness in the real world
 * Sim-to-real gap
 * Safety and reliability
 * Evaluation and benchmarking
 * Integration of perception, reasoning, planning, and control: the autonomous vehicles industry seems to have made several advances in this direction. 
-
-
-#### Aerial autonomy 
 
 
 
