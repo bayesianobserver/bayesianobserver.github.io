@@ -5,6 +5,12 @@ date: 2026-03-15
 mathjax: true
 ---
 
+EDIT: After writing the summary below of the current state of humanoid robotics below, I cam across a couple of great posts recently written by roboticists: 
+
+* Rodney Brooks (MIT, iRobot) has a (long) [post](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/) on why he thinks dexterity in humanoids is >= 10 years away. 
+* Alan Fern (Oregon State Univ) has a nice post surveying 18 different [Whole Body Controllers](https://gofai2robots.substack.com/p/the-emerging-humanoid-motor-cortex), i.e. the bottom layer responsible for fine grained control, stability, and motion, typically trained using RL inside simulation environments like MuJoCo, Isaac etc.
+
+
 There is perceptible excitement in the humanoid robotics industry these days. Personally, I think this is the most exciting space to be working in today -- the promise of a fully autonomous, continuously learning, humanoid robot, seems within reach. A number of places are seriously working on developing a humanoid robot: Tesla, 1x, Figure, Boston Dynamics, Agility, Apptronik. This means there is a significant amount of capital betting on either a complete humanoid, or significant unlocking of capability to count as partial progress toward that goal. Not all robotics companies started as 'AI-first' -- several started with a focus on the mechatronics/hydraulics and hand-engineered rules for movement -- but there is a kind of convergence in progress I think, wherein most companies have realized that it is better to use data to learn behavior policies than to explicitly program robots with rules. 
 
 It feels to me like robotics is at an inflectinon point, turning from a field dominated by impressive demos, academic research and special-purpose factory-robots, to a field that can progressively yield to improvements in engineering, modeling and scale of data, to show a path to a functioning, relaible humanoid robot within say 5-10 years.
