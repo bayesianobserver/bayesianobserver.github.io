@@ -48,6 +48,7 @@ In the remainder of this post, I will tackle the above questions.
 **References**
 
 [0] High-Resolution Image Synthesis with Latent Diffusion Models, Robin Rombach, 2022
+
 [1] A Path Towards Autonomous Machine Intelligence, Yann LeCun, 2022
 
 
