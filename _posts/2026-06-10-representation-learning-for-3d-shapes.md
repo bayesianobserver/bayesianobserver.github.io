@@ -11,9 +11,8 @@ There is a geometric solution to this problem - it involves specific steps in 3D
 
 The fact that the scan and the design are not in the same orientation but must still map to the same embedding gives the problem a flavor of SE3-invariance. I built a self-supervised learning model for these 3D objects using two different architectures, both trained using a InfoNCE-style SupCon loss, where for each anchor sample, there are multiple positives and many negatives.
 
-<img width="320"  src="/assets/contrastive.png">
 <div align="center">
-  <img width="500" src="/assets/contrastive.png" alt="Contrastive Learning">
+  <img width="600" src="/assets/contrastive.png" alt="Contrastive Learning">
   <br>
   <sub>We want the learnt embedding to be pose invariant</sub>
 </div>
