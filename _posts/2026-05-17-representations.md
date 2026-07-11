@@ -23,5 +23,16 @@ One of the core open questions in neuroscience is: How is a piece of information
 
 * Apparently there are communities that do not have words for right and left in their language. One example is the Guugu Yimithirr people of northern Australia. Instead of saying something like "Could you please pass me the fork to the left of your plate" they might say something like "please pass me the fork to the northeast of your plate". Another such community is the Kuuk Thaayorre also of Australia. when asked to arrange pictures showing time progression (e.g. aging), English speakers typically arrange left → right while Kuuk Thaayorre speakers arrange east → west regardless of which direction they themselves are facing. Does this mean that the people of these communities are working extra hard to constantly keep track of their orientation? I find this unlikely. My guess is that their brains are representing their visual input in a different way.
 
+EDITS: 
+
+[Emily Finn](https://fas.dartmouth.edu/news/2026/02/neuroscientist-emily-finn-wins-international-early-career-award) of Dartmouth has been study something very very close to the above. 
+
+I think the ideas above explain a few more things: 
+
+Two people presented with the same information or experience can interpret the experience completely differently. They can also pay attention to very different components of the experience. 
+
+
+
+
 
 
