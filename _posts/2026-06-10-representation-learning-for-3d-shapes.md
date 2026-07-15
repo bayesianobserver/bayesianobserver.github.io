@@ -5,11 +5,13 @@ date: 2026-06-10
 mathjax: true
 ---
 
-I recently worked on a project on a representation learning model for 3D shapes using their point clouds and meshes -- specifically 3D scans of teeth. The problem was straitforward: given a 3D point cloud from a scan of a single tooth in a manufacturing facility that makes crowns, determine which CAD design mesh, among thousands, it belongs to. The scan and the designs are not in the same orientation/pose. 
+I recently worked on a project for representation learning on 3D shapes using their point clouds and meshes -- specifically, 3D scans of teeth. The problem was straitforward: given a 3D point cloud from a scan of a single tooth in a manufacturing facility that makes crowns, determine which CAD design mesh, among tens of thousands of possible designs, it belongs to. The scan and the designs are not in the same orientation/pose, and do not have the same number of points. 
 
-There is a geometric solution to this problem - it involves specific steps in 3D-vision for testing each candidate mesh against the 3d scan cloud: (a) global registration, (b) ICP (iterative closest point) to align to point clouds as best as possible, (d) measuring global deviation of the scan points with respect to the design mesh. This is extrmely slow. 
+There is a geometric solution to this problem - it involves specific steps in 3D-vision for testing each candidate mesh against the 3d scan cloud: (a) global registration using something like ICP (iterative closest point) to align the scan point cloud to each design mesh as best as possible, (d) measuring global deviation of the scan points with respect to the design mesh. Not only is this is extrmely slow, it does not work very well, i.e. it does produce false positives. Further it is sensitive to the initial orientation of the scan with respect to the orientation of the design mesh. 
 
-The fact that the scan and the design are not in the same orientation but must still map to the same embedding gives the problem a flavor of SE3-invariance. I built a self-supervised learning model for these 3D objects using two different architectures, both trained using a InfoNCE-style SupCon loss, where for each anchor sample, there are multiple positives and many negatives.
+### TLDR; SE3-equivariant architectures do not necesarily beat simpler architectures with rotational augmentation
+
+The fact that the scan and the design are not in the same orientation but must still map to the same embedding gives the problem a flavor of SE3-invariance. I built a self-supervised learning model for these 3D objects using two different architectures, both trained using a InfoNCE-style [SupCon](https://arxiv.org/abs/2004.11362) loss, where for each anchor sample, there are multiple positives and many negatives. 
 
 <div align="center">
   <img width="600" src="/assets/contrastive.png" alt="Contrastive Learning">
