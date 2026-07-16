@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ultrasound and AI"
+title: "Ultrasound is ripe for AI"
 date: 2026-06-27
 mathjax: true
 kramdown:
@@ -18,12 +18,11 @@ Among the various imaging modalities in medicine, ultrasound stands out as an od
 
 * MRI, CT and X-rays are standardized, in the sense that they do not require a trained technician to expertly maneuver an imaging probe. Instead, the patient gets into position inside a machine and the machine produces an image with little skill needed from the machine operator. In contrast, ultrasound is manual-labor-intensive. A technician does the following in a closed loop: an ultrasound probe emits a directional sound pulse and catches the reflections from tissue boundaries in the body, and this is meant to 'illuminate' a 2D slice of the patient's body. The 2D image on the screen shows an estimate of the intensity of echoes at each depth and sweep angle for a specific 2D slice that a probe is pointing to. In order to image the target organ and extract a target piece of information (e.g. the size of a foetus' heart), the technician must interpret the 2D image being displayed on a screen, and adjust her probe's position and angle. This manual operation is a bottleneck because in the absence of trained technicians make this technology unavailable, or worse, incorrectly interpreted by untrained individuals, in rural parts of the world. It also makes the quality of clinical information derived from ultrasound dependent on the technician's skill.
 
-In this post, I will lay out a number of ideas that I think can lead to the following when applied in concert. Most of these ideas are already active areas of work in academia or industry. 
+The question I'm motivated by is: 
 
-* Break free of operator skill
-* Partial measurements instead of full scan
-* 3D reconstruction. Most of ultrasound today still displays echogenicity of 2D slices, not the 3D reconstruction. 
-* Uncertainty awareness. By incorporating uncertainty, especially as it pertains to the clinical variable of interest, we can determine whether more scanning is still needed, and where to point the probe next. 
+> Can an uncertainty-aware active-acquisition system reconstruct clinically relevant patient-specific quantities from a minimal sequence of adaptively chosen ultrasound measurements?
+
+Below, I will lay out a number of ideas that I think can enable the above when applied in concert. Most of these ideas are already active areas of work in academia or industry. 
 
 Note that like the other imaging modalities, ultrasound is used to image many organs in the body. 
 
