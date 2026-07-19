@@ -4,8 +4,6 @@ title: About
 includelink: true
 ---
 
-# About Me
-
 I am an applied machine learning researcher and engineer working at the intersection of **3D computer vision, geometric learning, generative modeling, and physical AI**.
 
 I currently work at **Dandy**, where I lead projects involving 3D point clouds and meshes, and bridge 3D compute vision methods with modern represetnation learning methods. Some of the things I've worked on are 3D generative modeling using conditional diffusion models, 3D shape retrieval using 3D scans and SE(3)-equivariant architectures, defect detection using 2D-to-3D registration. 
