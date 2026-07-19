@@ -31,6 +31,7 @@ This website is where I write about machine learning, geometry, sensing, biology
 * [Writing](https://bayesianobserver.github.io/)
 * [LinkedIn](https://www.linkedin.com/in/suhasmathur/)
 * [GitHub](https://github.com/bayesianobserver)
+* [Publications](https://scholar.google.com/citations?user=jG0fGMsAAAAJ&hl=en)
 
 
 
