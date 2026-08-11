@@ -8,7 +8,7 @@ kramdown:
 ---
 
 <p align="center">
-<img width="400" src="/assets/ultrasound.png" alt="Ultrasound imaging">
+<img width="300" src="/assets/ultrasound.png" alt="Ultrasound imaging">
 </p>
 
 Among the various imaging modalities in medicine, ultrasound stands out as an odd man out:
@@ -68,4 +68,9 @@ Variables of interest: It is even more important to quantify uncertainty in the 
 ### The north-star
 
 A home scanner than can be used by laymen. Early detection of tumors. I think low cost early detection is the current best solution to cancer. 
+
+
+Ultrasound + AI projects that I'm aware of: 
+
+* 
 
