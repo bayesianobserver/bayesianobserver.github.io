@@ -148,7 +148,7 @@ a:visited { color: #205caa; }
 
 .posts { list-style-type: none; }
 
-.posts li { margin-bottom: 30px; }
+.posts li { margin: 0; display: flex; align-items: baseline; }
 
 .posts .post-link {
   font-size: 20px;
@@ -157,7 +157,8 @@ a:visited { color: #205caa; }
 }
 
 .posts .post-date {
-  display: block;
+  flex: 0 0 7.5em;
+  font-variant-numeric: tabular-nums;
   font-size: 15px;
   color: #818181;
 }
