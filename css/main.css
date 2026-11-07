@@ -425,3 +425,56 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+
+/* Typography: LaTeX look (Computer Modern / CMU) */
+/* ----------------------------------------------------------*/
+
+@font-face {
+  font-family: "CMU Serif";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/cmu-serif-500-roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "CMU Serif";
+  font-style: italic; font-weight: 400; font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/cmu-serif-500-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "CMU Serif";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/cmu-serif-700-roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "CMU Serif";
+  font-style: italic; font-weight: 700; font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/cmu-serif-700-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "CMU Typewriter Text";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/cmu-typewriter-text-500-roman.woff2") format("woff2");
+}
+
+body {
+  font-family: "CMU Serif", "Latin Modern Roman", Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+}
+
+/* Headings keep the original light look; CM has no light weight, so use regular */
+h1, h2, h3, h4, h5, h6,
+.post-header h1,
+.post-content h1, .post-content h2, .post-content h3,
+.post-content h4, .post-content h5, .post-content h6 {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.site-title, .site-nav .page-link, .posts .post-link { letter-spacing: 0; }
+.posts .post-date { font-size: 16px; }
+
+pre, code, kbd, samp {
+  font-family: "CMU Typewriter Text", "Latin Modern Mono", Menlo, Consolas, monospace;
+}
